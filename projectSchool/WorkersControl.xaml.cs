@@ -74,8 +74,8 @@ namespace projectSchool
                 Imie_i_Nazwisko = box_Name.Text,
                 Stanowisko = box_Position.Text,
                 PESEL = box_pesel.Text,
-                Data_Urodzenia= pick_BDate.SelectedDate.Value,
-                Data_zatrudnienia =pick_DateZatrud.SelectedDate.Value,
+                Data_Urodzenia= pick_BDate.SelectedDate,
+                Data_zatrudnienia =pick_DateZatrud.SelectedDate,
                 
             };
             db.Pracowniks.Add(pracownikObject);
@@ -103,8 +103,8 @@ namespace projectSchool
                 obj.Imie_i_Nazwisko = this.box_Name.Text;
                 obj.Stanowisko= this.box_Position.Text;
                 obj.PESEL =this.box_pesel.Text;
-                obj.Data_zatrudnienia = this.pick_DateZatrud.SelectedDate.Value;
-                obj.Data_Urodzenia = this.pick_BDate.SelectedDate.Value;
+                obj.Data_zatrudnienia = this.pick_DateZatrud.SelectedDate;
+                obj.Data_Urodzenia = this.pick_BDate.SelectedDate;
                 
                 db.SaveChanges();
                 this.gridWorkers.ItemsSource = db.Pracowniks.ToList();

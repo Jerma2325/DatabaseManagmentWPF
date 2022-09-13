@@ -87,6 +87,9 @@
     <Compile Include="Pracownik.cs">
       <DependentUpon>SklepDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProductsControl.xaml.cs">
+      <DependentUpon>ProductsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Produkt.cs">
       <DependentUpon>SklepDatabaseModel.tt</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProductsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WorkersControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectSchool"
         mc:Ignorable="d"
-        Title="WorkersControl" Height="417" Width="800">
+        Title="WorkersControl" Height="430" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <DataGrid Name="gridWorkers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,9,8,224" SelectionChanged="DataGrid_SelectionChanged"/>
         <TextBox x:Name="box_Name" HorizontalAlignment="Left" Margin="123,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
