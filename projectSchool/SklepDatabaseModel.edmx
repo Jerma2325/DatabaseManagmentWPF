@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SklepDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pracownik">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imie i Nazwisko" Type="varchar" MaxLength="200" />
+          <Property Name="Stanowisko" Type="nvarchar" MaxLength="50" />
+          <Property Name="Data Urodzenia" Type="date" />
+          <Property Name="PESEL" Type="nchar" MaxLength="50" />
+          <Property Name="Data zatrudnienia" Type="date" />
+        </EntityType>
+        <EntityType Name="Produkt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="200" />
+          <Property Name="Data dostawy" Type="datetime" />
+          <Property Name="Ilość na stanie" Type="float" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sklep">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="500" />
+          <Property Name="Data otwarcia" Type="date" />
+          <Property Name="Ilość pracówników" Type="int" />
+          <Property Name="Ilość etatów" Type="float" />
+          <Property Name="Budżet" Type="float" />
+          <Property Name="Powierzchnia(m^2)" Type="float" />
+        </EntityType>
+        <EntityType Name="Wynik">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id Sklepu" Type="int" />
+          <Property Name="Budżet na ten miesiąc" Type="float" />
+          <Property Name="Zrealizowano" Type="float" />
+          <Property Name="Wynik budżetu" Type="float" />
+          <Property Name="Straty oczekiwane" Type="float" />
+          <Property Name="Straty rzeczywiste" Type="float" />
+          <Property Name="Wynik strat" Type="float" />
+        </EntityType>
+        <EntityContainer Name="SklepDatabaseModelStoreContainer">
+          <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produkt" EntityType="Self.Produkt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sklep" EntityType="Self.Sklep" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wynik" EntityType="Self.Wynik" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SklepDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pracownik">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imie_i_Nazwisko" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Stanowisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Data_Urodzenia" Type="DateTime" Precision="0" />
+          <Property Name="PESEL" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Data_zatrudnienia" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Produkt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Data_dostawy" Type="DateTime" Precision="3" />
+          <Property Name="Ilość_na_stanie" Type="Double" />
+          <Property Name="Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sklep">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Data_otwarcia" Type="DateTime" Precision="0" />
+          <Property Name="Ilość_pracówników" Type="Int32" />
+          <Property Name="Ilość_etatów" Type="Double" />
+          <Property Name="Budżet" Type="Double" />
+          <Property Name="Powierzchnia_m_2_" Type="Double" />
+        </EntityType>
+        <EntityType Name="Wynik">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Sklepu" Type="Int32" />
+          <Property Name="Budżet_na_ten_miesiąc" Type="Double" />
+          <Property Name="Zrealizowano" Type="Double" />
+          <Property Name="Wynik_budżetu" Type="Double" />
+          <Property Name="Straty_oczekiwane" Type="Double" />
+          <Property Name="Straty_rzeczywiste" Type="Double" />
+          <Property Name="Wynik_strat" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="SklepDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pracowniks" EntityType="Self.Pracownik" />
+          <EntitySet Name="Produkts" EntityType="Self.Produkt" />
+          <EntitySet Name="Skleps" EntityType="Self.Sklep" />
+          <EntitySet Name="Wyniks" EntityType="Self.Wynik" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SklepDatabaseModelStoreContainer" CdmEntityContainer="SklepDatabaseEntities">
+          <EntitySetMapping Name="Pracowniks">
+            <EntityTypeMapping TypeName="SklepDatabaseModel.Pracownik">
+              <MappingFragment StoreEntitySet="Pracownik">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Imie_i_Nazwisko" ColumnName="Imie i Nazwisko" />
+                <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+                <ScalarProperty Name="Data_Urodzenia" ColumnName="Data Urodzenia" />
+                <ScalarProperty Name="PESEL" ColumnName="PESEL" />
+                <ScalarProperty Name="Data_zatrudnienia" ColumnName="Data zatrudnienia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produkts">
+            <EntityTypeMapping TypeName="SklepDatabaseModel.Produkt">
+              <MappingFragment StoreEntitySet="Produkt">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Data_dostawy" ColumnName="Data dostawy" />
+                <ScalarProperty Name="Ilość_na_stanie" ColumnName="Ilość na stanie" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Skleps">
+            <EntityTypeMapping TypeName="SklepDatabaseModel.Sklep">
+              <MappingFragment StoreEntitySet="Sklep">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Data_otwarcia" ColumnName="Data otwarcia" />
+                <ScalarProperty Name="Ilość_pracówników" ColumnName="Ilość pracówników" />
+                <ScalarProperty Name="Ilość_etatów" ColumnName="Ilość etatów" />
+                <ScalarProperty Name="Budżet" ColumnName="Budżet" />
+                <ScalarProperty Name="Powierzchnia_m_2_" ColumnName="Powierzchnia(m^2)" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wyniks">
+            <EntityTypeMapping TypeName="SklepDatabaseModel.Wynik">
+              <MappingFragment StoreEntitySet="Wynik">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_Sklepu" ColumnName="Id Sklepu" />
+                <ScalarProperty Name="Budżet_na_ten_miesiąc" ColumnName="Budżet na ten miesiąc" />
+                <ScalarProperty Name="Zrealizowano" ColumnName="Zrealizowano" />
+                <ScalarProperty Name="Wynik_budżetu" ColumnName="Wynik budżetu" />
+                <ScalarProperty Name="Straty_oczekiwane" ColumnName="Straty oczekiwane" />
+                <ScalarProperty Name="Straty_rzeczywiste" ColumnName="Straty rzeczywiste" />
+                <ScalarProperty Name="Wynik_strat" ColumnName="Wynik strat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

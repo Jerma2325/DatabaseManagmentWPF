@@ -13,10 +13,10 @@ namespace projectSchool
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HospitalManagmentDatabaseEntities : DbContext
+    public partial class SklepDatabaseEntities : DbContext
     {
-        public HospitalManagmentDatabaseEntities()
-            : base("name=HospitalManagmentDatabaseEntities")
+        public SklepDatabaseEntities()
+            : base("name=SklepDatabaseEntities")
         {
         }
     
@@ -25,6 +25,9 @@ namespace projectSchool
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<Pracownik> Pracowniks { get; set; }
+        public virtual DbSet<Produkt> Produkts { get; set; }
+        public virtual DbSet<Sklep> Skleps { get; set; }
+        public virtual DbSet<Wynik> Wyniks { get; set; }
     }
 }

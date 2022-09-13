@@ -12,11 +12,13 @@ namespace projectSchool
     using System;
     using System.Collections.Generic;
     
-    public partial class Doctor
+    public partial class Pracownik
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Spectalization { get; set; }
-        public string Qualification { get; set; }
+        public string Imie_i_Nazwisko { get; set; }
+        public string Stanowisko { get; set; }
+        public Nullable<System.DateTime> Data_Urodzenia { get; set; }
+        public string PESEL { get; set; }
+        public Nullable<System.DateTime> Data_zatrudnienia { get; set; }
     }
 }
