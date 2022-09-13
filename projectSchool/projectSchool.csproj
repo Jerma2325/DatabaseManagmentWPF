@@ -111,6 +111,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SklepDatabaseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="SklepsControl.xaml.cs">
+      <DependentUpon>SklepsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkersControl.xaml.cs">
       <DependentUpon>WorkersControl.xaml</DependentUpon>
     </Compile>
@@ -130,6 +133,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProductsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SklepsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
