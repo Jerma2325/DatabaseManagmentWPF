@@ -27,7 +27,7 @@ namespace projectSchool
             InitializeComponent();
 
             SklepDatabaseEntities db = new SklepDatabaseEntities();
-            var products = from d in db.Skleps
+            var skleps = from d in db.Skleps
                            select new
                            {
                                Id = d.Id,
@@ -41,7 +41,7 @@ namespace projectSchool
 
 
                            };
-            foreach (var item in products)
+            foreach (var item in skleps)
             {
                 Console.WriteLine(item.Id);
                 Console.WriteLine(item.Adres);
@@ -52,7 +52,7 @@ namespace projectSchool
                 Console.WriteLine(item.Powierzchnia);
 
             }
-            this.gridSklepy.ItemsSource = products.ToList();
+            this.gridSklepy.ItemsSource = skleps.ToList();
         }
 
         private int updatingSklepID = 0;
@@ -153,6 +153,6 @@ namespace projectSchool
             }
         }
 
-       
+        
     }
 }

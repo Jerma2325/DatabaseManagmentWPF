@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="pracownikiGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="7,33,443,231"/>
+        <DataGrid x:Name="produktyGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="440,32,10,231"/>
+        <DataGrid x:Name="sklepyGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="7,259,443,4"/>
+        <DataGrid x:Name="wynikiGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="440,254,10,9"/>
+        <Button x:Name="btn_pracow" Content="Edit" HorizontalAlignment="Left" Margin="227,9,0,0" VerticalAlignment="Top" Width="46" FontFamily="Work Sans ExtraBold" Click="btn_pracow_Click"/>
+        <Button x:Name="btn_sklepy" Content="Edit" HorizontalAlignment="Left" Margin="211,235,0,0" VerticalAlignment="Top" Width="46" FontFamily="Work Sans ExtraBold" Click="btn_sklepy_Click"/>
+        <Button x:Name="btn_products" Content="Edit" HorizontalAlignment="Left" Margin="679,9,0,0" VerticalAlignment="Top" Width="46" FontFamily="Work Sans ExtraBold" Click="btn_products_Click"/>
+        <Button x:Name="btn_wyniks" Content="Edit" HorizontalAlignment="Left" Margin="657,232,0,0" VerticalAlignment="Top" Width="46" Click="btn_wyniks_Click" FontFamily="Work Sans ExtraBold"/>
+        <Label Content="Pracownicy" HorizontalAlignment="Left" Margin="126,3,0,0" VerticalAlignment="Top" FontFamily="Work Sans ExtraBold" FontSize="14"/>
+        <Label Content="Sklepy" HorizontalAlignment="Left" Margin="143,229,0,0" VerticalAlignment="Top" FontFamily="Work Sans ExtraBold" FontSize="14"/>
+        <Label x:Name="txt_produkty" Content="Produkty" HorizontalAlignment="Left" Margin="596,4,0,0" VerticalAlignment="Top" FontFamily="Work Sans ExtraBold" FontSize="14"/>
+        <Label Content="Wyniki" HorizontalAlignment="Left" Margin="589,226,0,0" VerticalAlignment="Top" Width="63" FontSize="14" FontFamily="Work Sans ExtraBold"/>
+        <Button x:Name="btnUpdate" Content="Refresh" HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Height="34" FontFamily="Work Sans ExtraBold" FontSize="14" Click="btnUpdate_Click"/>
+
     </Grid>
 </Window>

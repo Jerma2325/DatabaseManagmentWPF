@@ -9,7 +9,7 @@
     <Grid>
         <DataGrid x:Name="gridSklepy" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,9,8,244" SelectionChanged="DataGrid_SelectionChanged"/>
         <TextBox x:Name="box_Adres" HorizontalAlignment="Left" Margin="123,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
-        <TextBox x:Name="box_Pracownik" HorizontalAlignment="Left" Margin="123,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589" TextChanged="box_Pracownik_TextChanged"/>
+        <TextBox x:Name="box_Pracownik" HorizontalAlignment="Left" Margin="123,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>
         <TextBox x:Name="box_Etaty" HorizontalAlignment="Left" Margin="123,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
         <TextBlock x:Name="blockAdres" HorizontalAlignment="Left" Margin="20,239,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" Foreground="Black"/>
         <TextBlock x:Name="blockDataOtwarcia" HorizontalAlignment="Left" Margin="20,264,0,0" TextWrapping="Wrap" Text="Data Owarcia" VerticalAlignment="Top"/>
@@ -19,7 +19,7 @@
         <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="262,237,0,0" VerticalAlignment="Top" Width="48" Height="18" Click="btnAdd_Click"/>
         <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="387,237,0,0" VerticalAlignment="Top" Width="48" Height="18" Click="btnRemove_Click"/>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="323,237,0,0" VerticalAlignment="Top" Height="18" Width="50" Click="btnUpdate_Click"/>
-        <Button x:Name="btnLoadData" Content="Load Data" HorizontalAlignment="Left" Margin="682,235,0,0" VerticalAlignment="Top" Click="btnLoadData_Click"/>
+        <Button x:Name="btnLoadData" Content="Load Data" HorizontalAlignment="Left" Margin="682,212,0,0" VerticalAlignment="Top" Click="btnLoadData_Click"/>
         <TextBlock x:Name="blockBudzet" HorizontalAlignment="Left" Margin="19,338,0,0" TextWrapping="Wrap" Text="Budżet" VerticalAlignment="Top"/>
         <TextBlock x:Name="blockPowierz" HorizontalAlignment="Left" Margin="19,362,0,0" TextWrapping="Wrap" Text="Powierzchnia(m^2)" VerticalAlignment="Top"/>
         <TextBox x:Name="box_budzet" HorizontalAlignment="Left" Margin="123,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>

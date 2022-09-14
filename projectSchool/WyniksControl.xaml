@@ -1,0 +1,31 @@
+﻿<Window x:Class="projectSchool.WyniksControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projectSchool"
+        mc:Ignorable="d"
+        Title="WyniksControl" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="gridWyniks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,9,8,244" SelectionChanged="DataGrid_SelectionChanged"/>
+        <TextBox x:Name="box_idSklepu" HorizontalAlignment="Left" Margin="142,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="box_BudzZreal" HorizontalAlignment="Left" Margin="142,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>
+        <TextBox x:Name="box_WynikBudz" HorizontalAlignment="Left" Margin="142,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <TextBlock x:Name="blockIdsklepu" HorizontalAlignment="Left" Margin="20,238,0,0" TextWrapping="Wrap" Text="Id Sklepu" VerticalAlignment="Top" Foreground="Black"/>
+        <TextBlock x:Name="blockBudzetMies" HorizontalAlignment="Left" Margin="19,265,0,0" TextWrapping="Wrap" Text="Budżet na ten miesiąc" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blockZrealiz" HorizontalAlignment="Left" Margin="20,290,0,0" TextWrapping="Wrap" Text="Zrealizowano" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blockWynikBud" HorizontalAlignment="Left" Margin="20,314,0,0" TextWrapping="Wrap" Text="Wynik budżetu" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="281,237,0,0" VerticalAlignment="Top" Width="48" Height="18" Click="btnAdd_Click"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="406,237,0,0" VerticalAlignment="Top" Width="48" Height="18" Click="btnRemove_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="342,237,0,0" VerticalAlignment="Top" Height="18" Width="50" Click="btnUpdate_Click"/>
+        <Button x:Name="btnLoadData" Content="Load Data" HorizontalAlignment="Left" Margin="682,205,0,0" VerticalAlignment="Top" Click="btnLoadData_Click"/>
+        <TextBlock x:Name="blockStrOczek" HorizontalAlignment="Left" Margin="19,339,0,0" TextWrapping="Wrap" Text="Straty oczekiwane" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blockStrRzecz" HorizontalAlignment="Left" Margin="19,362,0,0" TextWrapping="Wrap" Text="Straty rzeczywiste" VerticalAlignment="Top"/>
+        <TextBox x:Name="box_StratyOcze" HorizontalAlignment="Left" Margin="142,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>
+        <TextBox x:Name="box_StratyRzecz" HorizontalAlignment="Left" Margin="142,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <TextBlock x:Name="blockWynikStrat" HorizontalAlignment="Left" Margin="19,385,0,0" TextWrapping="Wrap" Text="Wynik Strat" VerticalAlignment="Top"/>
+        <TextBox x:Name="box_budzetNamies" HorizontalAlignment="Left" Margin="143,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>
+        <TextBox x:Name="box_WynikStrat" HorizontalAlignment="Left" Margin="142,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+
+    </Grid>
+</Window>
