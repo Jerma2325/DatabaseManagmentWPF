@@ -1,3 +1,5 @@
+﻿using projectSchool;
+
 namespace FinalProjectTest
 {
     [TestClass]
@@ -6,6 +8,7 @@ namespace FinalProjectTest
         [TestMethod]
         public void TestCreateUpdateWorkers()
         {
+            MainWindow wyniksControl = new MainWindow();
             
         }
     }

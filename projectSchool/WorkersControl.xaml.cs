@@ -19,8 +19,10 @@ namespace projectSchool
     public partial class WorkersControl : Window
     {
         
-
         
+        /// <summary>
+        /// Utwzarza tabelke i prezentuje dane z bazy danych w niej.
+        /// </summary>
         public WorkersControl()
         {
             InitializeComponent();
@@ -35,9 +37,8 @@ namespace projectSchool
                            Pesel = d.PESEL,
                            DataUrodzenia = d.Data_Urodzenia,
                            DataZatrudnienia= d.Data_zatrudnienia,
-                          
-                          
                        };
+            
             foreach (var item in pracowniks)
             {
                 Console.WriteLine(item.Id);
@@ -48,7 +49,7 @@ namespace projectSchool
                 Console.WriteLine(item.DataZatrudnienia);
                 
             }
-            this.gridWorkers.ItemsSource = pracowniks.ToList();
+            this.gridWorkers.ItemsSource = pracowniks.ToList(); 
         }
         
         private int updatingPracownikID = 0;
@@ -74,7 +75,7 @@ namespace projectSchool
             }
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        public void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             SklepDatabaseEntities db = new SklepDatabaseEntities();
             Pracownik pracownikObject = new Pracownik()

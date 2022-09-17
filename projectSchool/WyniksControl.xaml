@@ -10,7 +10,7 @@
         <DataGrid x:Name="gridWyniks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,9,8,244" SelectionChanged="DataGrid_SelectionChanged"/>
         <TextBox x:Name="box_idSklepu" HorizontalAlignment="Left" Margin="142,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
         <TextBox x:Name="box_BudzZreal" HorizontalAlignment="Left" Margin="142,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.589"/>
-        <TextBox x:Name="box_WynikBudz" HorizontalAlignment="Left" Margin="142,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <TextBox x:Name="box_WynikBudz" HorizontalAlignment="Left" Margin="142,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17" IsReadOnlyCaretVisible="True"/>
         <TextBlock x:Name="blockIdsklepu" HorizontalAlignment="Left" Margin="20,238,0,0" TextWrapping="Wrap" Text="Id Sklepu" VerticalAlignment="Top" Foreground="Black"/>
         <TextBlock x:Name="blockBudzetMies" HorizontalAlignment="Left" Margin="19,265,0,0" TextWrapping="Wrap" Text="Budżet na ten miesiąc" VerticalAlignment="Top"/>
         <TextBlock x:Name="blockZrealiz" HorizontalAlignment="Left" Margin="20,290,0,0" TextWrapping="Wrap" Text="Zrealizowano" VerticalAlignment="Top"/>

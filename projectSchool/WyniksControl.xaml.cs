@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace projectSchool
 {
     /// <summary>
-    /// Interaction logic for WyniksControl.xaml
+    /// Okienko do zarządzaniem tablki z wynikami pracy sklepow. Mozna usuwac dodawac lub zmieniac recordy.
     /// </summary>
     public partial class WyniksControl : Window
     {
 
 
-
+        /// <summary>
+        /// Ustawia.
+        /// </summary>
         public WyniksControl()
         {
             InitializeComponent();
@@ -84,13 +86,14 @@ namespace projectSchool
             
                 Wynik WynikObject = new Wynik()
                 {
+
                     Id_Sklepu = Convert.ToInt32(box_idSklepu.Text),
                     Budżet_na_ten_miesiąc = Convert.ToDouble(box_budzetNamies.Text),
                     Zrealizowano = Convert.ToDouble(box_BudzZreal.Text),
-                    Wynik_budżetu = Convert.ToDouble(box_WynikBudz.Text),
+                    Wynik_budżetu = (Convert.ToDouble(this.box_BudzZreal.Text) / (Convert.ToDouble(this.box_budzetNamies.Text) / 100)),
                     Straty_oczekiwane = Convert.ToDouble(box_StratyOcze.Text),
                     Straty_rzeczywiste = Convert.ToDouble(box_StratyRzecz.Text),
-                    Wynik_strat = Convert.ToDouble(box_WynikStrat.Text),
+                    Wynik_strat = (Convert.ToDouble(this.box_StratyRzecz.Text) / (Convert.ToDouble(this.box_StratyOcze.Text) / 100)),
 
                 };
                 db.Wyniks.Add(WynikObject);
@@ -120,10 +123,10 @@ namespace projectSchool
                 obj.Id_Sklepu = Convert.ToInt32(this.box_idSklepu.Text);
                 obj.Budżet_na_ten_miesiąc= Convert.ToDouble(this.box_budzetNamies.Text);
                 obj.Zrealizowano= Convert.ToDouble(this.box_BudzZreal.Text);
-                obj.Wynik_budżetu= Convert.ToDouble(this.box_WynikBudz.Text);
+                obj.Wynik_budżetu= (Convert.ToDouble(this.box_BudzZreal.Text)/(Convert.ToDouble(this.box_budzetNamies.Text)/100));
                 obj.Straty_oczekiwane = Convert.ToDouble(this.box_StratyOcze.Text);
                 obj.Straty_rzeczywiste = Convert.ToDouble(this.box_StratyRzecz.Text);
-                obj.Wynik_strat = Convert.ToDouble(this.box_WynikStrat.Text);
+                obj.Wynik_strat = (Convert.ToDouble(this.box_StratyRzecz.Text)/(Convert.ToDouble(this.box_StratyOcze.Text)/100));
 
 
                 db.SaveChanges();
@@ -156,9 +159,6 @@ namespace projectSchool
             }
         }
 
-        private void box_Name_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

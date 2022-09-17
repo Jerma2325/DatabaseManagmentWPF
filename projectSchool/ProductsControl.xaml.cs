@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace projectSchool
 {
     /// <summary>
-    /// Interaction logic for ProductsControl.xaml
+    /// Okienko do zarządzaniem tablki z produktami. Mozna usuwac dodawac lub zmieniac recordy.
     /// </summary>
     public partial class ProductsControl : Window
     {

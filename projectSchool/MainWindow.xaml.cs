@@ -16,10 +16,13 @@ using System.Windows.Shapes;
 namespace projectSchool
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Glowne okienko w ktorym mozna pzregladac dane z roznych tablic i edytować ich w odzielnych okienkach ktore otwierane za pomoca przycisków[edit] przy każdej tablece.
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Pobiera dane z czterych tablic z bazy i wyswietla ich.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

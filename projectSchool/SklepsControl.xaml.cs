@@ -21,7 +21,9 @@ namespace projectSchool
     {
 
 
-
+        /// <summary>
+        /// Utwzarza tabelke i prezentuje dane z bazy danych w niej.
+        /// </summary>
         public SklepsControl()
         {
             InitializeComponent();
