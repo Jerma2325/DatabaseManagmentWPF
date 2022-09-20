@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "StoreInstaller", "StoreInstaller\StoreInstaller.wapproj", "{992A6ACC-B8A6-48E4-AD7C-003E4B86C44E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer_V1", "Installer_V1\Installer_V1.vdproj", "{70054B9A-D264-4F25-99AF-3F1B1BA1439C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,16 @@ Global
 		{992A6ACC-B8A6-48E4-AD7C-003E4B86C44E}.Release|x86.ActiveCfg = Release|x86
 		{992A6ACC-B8A6-48E4-AD7C-003E4B86C44E}.Release|x86.Build.0 = Release|x86
 		{992A6ACC-B8A6-48E4-AD7C-003E4B86C44E}.Release|x86.Deploy.0 = Release|x86
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Debug|Any CPU.ActiveCfg = Debug
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Debug|ARM.ActiveCfg = Debug
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Debug|ARM64.ActiveCfg = Debug
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Debug|x64.ActiveCfg = Debug
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Debug|x86.ActiveCfg = Debug
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Release|Any CPU.ActiveCfg = Release
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Release|ARM.ActiveCfg = Release
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Release|ARM64.ActiveCfg = Release
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Release|x64.ActiveCfg = Release
+		{70054B9A-D264-4F25-99AF-3F1B1BA1439C}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

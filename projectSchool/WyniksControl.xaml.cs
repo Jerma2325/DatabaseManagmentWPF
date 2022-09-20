@@ -22,7 +22,7 @@ namespace projectSchool
 
 
         /// <summary>
-        /// Ustawia.
+        /// Ustawia
         /// </summary>
         public WyniksControl()
         {
